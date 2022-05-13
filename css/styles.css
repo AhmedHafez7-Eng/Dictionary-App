@@ -1,0 +1,236 @@
+/* Import Google Font = Poppins */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #583205;
+}
+
+.backMusic {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    color: #111;
+    cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+    width: 420px;
+    background: #fff;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 28px 28px 45px;
+}
+
+.wrapper header {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.wrapper .searchArea {
+    position: relative;
+    margin: 35px 0 18px;
+}
+
+.wrapper .searchArea input {
+    height: 53px;
+    width: 100%;
+    outline: none;
+    padding: 0 42px;
+    border: 1px solid #999;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    font-size: 16px;
+}
+
+.wrapper .searchArea input:focus {
+    padding: 0 41px;
+    border: 2px solid #583205;
+}
+
+.wrapper .searchArea input::placeholder {
+    color: #b8b8b8;
+}
+
+.wrapper .searchArea :where(i, span) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.wrapper .searchArea i {
+    left: 18px;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.wrapper .searchArea input:focus~i {
+    color: #583205;
+}
+
+.wrapper .searchArea span {
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+.wrapper .searchArea input:valid~span {
+    display: block;
+}
+
+.wrapper .hintText {
+    font-size: 13px;
+    color: #9a9a9a;
+    margin: -3px 0 -10px;
+}
+
+.wrapper.active .hintText {
+    display: none;
+}
+
+.hintText span {
+    font-weight: 500;
+}
+
+.wrapper ul {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+.wrapper.active ul {
+    height: 303px;
+    opacity: 1;
+}
+
+.wrapper ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #ccc;
+}
+
+.wrapper ul li:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+}
+
+ul .word p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+ul .word span {
+    font-size: 12px;
+    color: #989898;
+}
+
+ul .word i {
+    cursor: pointer;
+    font-size: 15px;
+    color: #999;
+}
+
+ul .content {
+    max-height: 215px;
+    overflow-y: auto;
+}
+
+ul .content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.content li .word-info {
+    padding-left: 10px;
+    border-left: 3px solid #583205;
+    border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -ms-border-radius: 4px 0 0 4px;
+    -o-border-radius: 4px 0 0 4px;
+}
+
+.content li .word-info p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.content li .word-info span {
+    font-size: 15px;
+    color: #7e7e7e;
+}
+
+.synonyms .word-info .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.synonyms .word-info .list span {
+    margin-right: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    min-height: 100vh;
+    background: #583205;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+footer p {
+    color: #FFF;
+    text-align: center;
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    -webkit-text-orientation: sideways;
+}
+
+footer p a {
+    color: #FFF;
+    /* text-decoration: none; */
+    font-weight: bold;
+}
